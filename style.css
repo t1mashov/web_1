@@ -1,0 +1,29 @@
+@import url(
+    'https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap'
+);
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h2 {
+    text-align: center;
+}
+
+nav {
+    background-color: #515151;
+    color: #ffffff;
+}
+.nav {
+    color: #d3d3ff;
+}
+
+footer {
+    background-color: #515151;
+    color: #ffffff;
+}
+
+.recipe {
+    background-color: beige;
+}
+
