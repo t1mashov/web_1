@@ -1,0 +1,28 @@
+
+
+.inp {
+    margin-left: 5px;
+}
+
+body {
+    background-image: url('res/bg1.jpg');
+}
+
+form {
+    width: 500px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #ffeca7;
+}
+
+.otkuda_uznali {
+    width: 180px;
+    margin: auto;
+}
+
+.ta-center {
+    text-align: center;
+}

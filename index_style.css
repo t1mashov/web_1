@@ -1,0 +1,128 @@
+@import url(
+    'https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap'
+);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-image: url('res/bg1.jpg');
+}
+
+h2 {
+    text-align: center;
+}
+
+nav {
+    padding: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.nav {
+    color: #ffffff;
+}
+
+.table-nav {
+    width: 90%;
+    margin: auto;
+    table-layout: fixed;
+}
+
+.ta-center {
+    text-align: center;
+}
+.table-nav td {
+    margin: auto; 
+}
+
+.table-nav .title {
+    color: #c0c0c0;
+}
+
+
+
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-image: url('res/bg1.jpg');
+    box-shadow: 0px 0px 3px 3px rgba(10,10,10,0.4);
+}
+
+main {
+    
+    /* background-color: beige; */
+    background-image: url('res/bg2.jpg');
+    padding-bottom: 10px;
+    height: 100%;
+}
+
+footer {
+    /* background-color: #696969; */
+    color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 0px 3px 3px rgba(10,10,10,0.4);
+}
+
+
+
+.recipe_text {
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-top: 5px;
+    padding-bottom: 10px;
+}
+
+.img_pelm {
+    text-align: center;
+}
+.img_pelm img {
+    box-shadow: 0px 0px 2px 2px #dbc989;
+}
+
+.block_ingridients {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 300px;
+    padding: 10px;
+    padding-left: 25px;
+    background-color: #ffeca7;
+}
+
+.title_pelm {
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: #ffeca7;
+}
+
+.sravnenie {
+    text-align: center;
+}
+.sravnenie table {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    margin: auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
+ }
+/* границы ячеек первого ряда таблицы */
+.sravnenie th {
+    border: 1px solid grey;
+    padding: 5px;
+}
+ /* границы ячеек тела таблицы */
+ .sravnenie td {
+    border: 1px solid grey;
+    padding: 5px;
+}
+
+.ftr {
+    width:250px;
+    margin: auto;
+}
