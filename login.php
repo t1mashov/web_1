@@ -1,5 +1,11 @@
 <?php
-    $current_page = 'login.php'
+
+$current_page = 'login.php';
+
+date_default_timezone_set("Europe/Moscow");
+$date = date('d.m.y');
+$time = date('h:m:s');
+
 ?>
 
 <!DOCTYPE html>
@@ -48,6 +54,7 @@
         <div class="ftr">
             <p>Телефон: 8(904)099-09-87</p>
             <p>Эл. почта: peter@timashov.su</p>
+            <p><?php echo 'Сформированно ', $date, ' в ', $time?></p>
         </div>
     </footer>
 </body>

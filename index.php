@@ -3,6 +3,7 @@
 $current_page = 'index.php';
 $title = 'Рецепты пельменей';
 
+date_default_timezone_set("Europe/Moscow");
 $date = date('d.m.y');
 $time = date('h:m:s');
 
