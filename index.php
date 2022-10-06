@@ -51,7 +51,7 @@ else {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../index_style.css"/>
+    <link rel="stylesheet" href="index_style.css"/>
     <title><?php echo $title?></title>
 </head>
 <body id="0">
