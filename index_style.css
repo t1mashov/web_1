@@ -16,24 +16,17 @@ h2 {
     text-align: center;
 }
 
+
+/* -- Навигация -- */
 nav {
     padding: 10px;
     padding-top: 30px;
     padding-bottom: 30px;
 }
-
-.nav {
-    color: #ffffff;
-}
-
 .table-nav {
     width: 90%;
     margin: auto;
     table-layout: fixed;
-}
-
-.ta-center {
-    text-align: center;
 }
 .table-nav td {
     margin: auto; 
@@ -42,6 +35,18 @@ nav {
 .table-nav .title {
     color: #c0c0c0;
 }
+
+.ta-center {
+    text-align: center;
+}
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+}
+nav a:hover {
+    color:#dbc989;
+}
+/* ----- */
 
 
 
@@ -54,15 +59,12 @@ header {
 }
 
 main {
-    
-    /* background-color: beige; */
     background-image: url('res/bg2.jpg');
     padding-bottom: 10px;
     height: 100%;
 }
 
 footer {
-    /* background-color: #696969; */
     color: #ffffff;
     padding: 20px;
     box-shadow: 0px 0px 3px 3px rgba(10,10,10,0.4);
