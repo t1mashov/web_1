@@ -4,44 +4,21 @@ $current_page = 'login.php';
 
 date_default_timezone_set("Europe/Moscow");
 $date = date('d.m.y');
-$time = date('h:m:s');
+$time = date('H:i:s');
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="login_style.css">
+    <?php include 'templates/head.php'?>
+    <link rel="stylesheet" href="css/login_style.css">
     <title>Register</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <table class="table-nav">
-                <tr>
-                    <td class="title"><h1>MrBestPelmen</h1></td>
-                    <td class="ta-center"><a href="index.php#0" class="nav">Пельмени с говядиной</a></td>
-                    <td class="ta-center"><a href="index.php#2" class="nav">Пельмени Сибирские</a></td>
-                    <td class="ta-center"><a href="index.php#3" class="nav">Сравнение пельменей</a></td>
-                    <td class="ta-center">
-                        <a href="<?php 
-                            $link = 'login.php';
-                            echo $link
-                        ?>" class="nav<?php
-                            if ($current_page == $link) echo ' selected'
-                        ?>">Аутентификация</a>
-                    </td>
-                    <td class="ta-center"><a href="<?php 
-                            $link = 'feedback.php';
-                            echo $link
-                        ?>" class="nav<?php
-                            if ($current_page == $link) echo ' selected'
-                        ?>">Обратная связь</a></td>
-                </tr>
-            </table>
-        </nav>
-    </header>
+    
+    <?php include 'templates/header.php'?>
+
     <main>
         <form action="https://httpbin.org/post" method="post">
             <p>Логин: <input name="login"></p>
@@ -50,12 +27,8 @@ $time = date('h:m:s');
             <button type="submit">Отправить</button>
         </form>
     </main>
-    <footer>
-        <div class="ftr">
-            <p>Телефон: 8(904)099-09-87</p>
-            <p>Эл. почта: peter@timashov.su</p>
-            <p><?php echo 'Сформированно ', $date, ' в ', $time?></p>
-        </div>
-    </footer>
+    
+    <?php include 'templates/footer.php'?>
+
 </body>
 </html>

@@ -1,11 +1,11 @@
 <?php
 
 $current_page = 'index.php';
-$title = 'Рецепты пельменей';
+$title = 'Тимашов Петр, 211-362, ЛР-3';
 
 date_default_timezone_set("Europe/Moscow");
 $date = date('d.m.y');
-$time = date('h:m:s');
+$time = date('H:i:s');
 
 $ingridients_1 = [
     '<li>Тесто для пельменей: <b>800г</b></li>',
@@ -51,37 +51,13 @@ else {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="index_style.css"/>
+    <?php include 'templates/head.php'?>
+    <link rel="stylesheet" href="css/index_style.css">
     <title><?php echo $title?></title>
 </head>
 <body id="0">
-    <header>
-        <nav>
-            <table class="table-nav">
-                <tr>
-                    <td class="title"><h1>MrBestPelmen</h1></td>
-                    <td class="ta-center"><a href="index.php#0" class="nav">Пельмени с говядиной</a></td>
-                    <td class="ta-center"><a href="index.php#2" class="nav">Пельмени Сибирские</a></td>
-                    <td class="ta-center"><a href="index.php#3" class="nav">Сравнение пельменей</a></td>
-                    <td class="ta-center">
-                        <a href="<?php 
-                            $link = 'login.php';
-                            echo $link
-                        ?>" class="nav<?php
-                            if ($current_page == $link) echo ' selected'
-                        ?>">Аутентификация</a>
-                    </td>
-                    <td class="ta-center"><a href="<?php 
-                            $link = 'feedback.php';
-                            echo $link
-                        ?>" class="nav<?php
-                            if ($current_page == $link) echo ' selected'
-                        ?>">Обратная связь</a></td>
-                </tr>
-            </table>
-        </nav>
-    </header>
+    
+    <?php include 'templates/header.php'?> 
 
     <main>
         <div id="1" class="recipe">
@@ -167,17 +143,10 @@ else {
                 </tr>
             </table>
         </div>
-        
-
     </main>
 
-    <footer>
-        <div class="ftr">
-            <p>Телефон: 8(904)099-09-87</p>
-            <p>Эл. почта: peter@timashov.su</p>
-            <p><?php echo 'Сформированно ', $date, ' в ', $time?></p>
-        </div>
-    </footer>
+    <?php include 'templates/footer.php'?>
+
 </body>
 </html>
 

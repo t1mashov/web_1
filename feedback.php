@@ -6,52 +6,48 @@ date_default_timezone_set("Europe/Moscow");
 $date = date('d.m.y');
 $time = date('H:i:s');
 
+$FIO = '';
+$Email = '';
+$info_from = 'Adds';
+// $message_type = 'predlozhenie';
+// $message_text = '';
+// $file = '';
+// $edit_data = 'off';
+
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="feedback_style.css">
+    <?php include 'templates/head.php'?>
+    <link rel="stylesheet" href="css/feedback_style.css">
     <title>Feedback</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <table class="table-nav">
-                <tr>
-                    <td class="title"><h1>MrBestPelmen</h1></td>
-                    <td class="ta-center"><a href="index.php#0" class="nav">Пельмени с говядиной</a></td>
-                    <td class="ta-center"><a href="index.php#2" class="nav">Пельмени Сибирские</a></td>
-                    <td class="ta-center"><a href="index.php#3" class="nav">Сравнение пельменей</a></td>
-                    <td class="ta-center">
-                        <a href="<?php 
-                            $link = 'login.php';
-                            echo $link
-                        ?>" class="nav<?php
-                            if ($current_page == $link) echo ' selected'
-                        ?>">Аутентификация</a>
-                    </td>
-                    <td class="ta-center"><a href="<?php 
-                            $link = 'feedback.php';
-                            echo $link
-                        ?>" class="nav<?php
-                            if ($current_page == $link) echo ' selected'
-                        ?>">Обратная связь</a></td>
-                </tr>
-            </table>
-        </nav>
-    </header>
+    
+    <?php include 'templates/header.php'?>
+
     <main>
-        <form action="https://httpbin.org/post" method="post">
-            <p><strong>ФИО:<input name="FIO" class="inp"></strong></p>
-            <p><strong>Email:<input name="Email" class="inp"></strong></p>
+        <form action="home.php" method="post">
+
+            <?php
+            if (isset($_GET['FIO'])) $FIO = $_GET['FIO'];
+            if (isset($_GET['Email'])) $Email = $_GET['Email'];
+            if (isset($_GET['otkuda_uznali_o_nas'])) $info_from = $_GET['otkuda_uznali_o_nas'];
+            // if (isset($_GET['Message_type'])) $message_type = $_GET['Message_type'];
+            // if (isset($_GET['Message_text'])) $message_text = $_GET['Message_text'];
+            // if (isset($_GET['file'])) $file = $_GET['file'];
+            // if (isset($_GET['agree_to_edit_personal_data'])) $edit_data = $_GET['agree_to_edit_personal_data'];
+            ?>
+
+            <p><strong>ФИО:<input name="FIO" class="inp" value="<?php echo $FIO?>"></strong></p>
+            <p><strong>Email:<input name="Email" class="inp" value="<?php echo $Email?>"></strong></p>
             <div class="otkuda_uznali">
                 <strong>Откуда узнали о нас?</strong>
-                <p><input name="otkuda_uznali_o_nas" type="radio" value="Adds" checked>Из рекламы</p>
-                <p><input name="otkuda_uznali_o_nas" type="radio" value="Find">Сами нашли</p>
-                <p><input name="otkuda_uznali_o_nas" type="radio" value="Friend">От друга</p>
+                <p><input name="otkuda_uznali_o_nas" type="radio" value="Adds" <?php if ($info_from=='Adds') echo 'checked'?>>Из рекламы</p>
+                <p><input name="otkuda_uznali_o_nas" type="radio" value="Find" <?php if ($info_from=='Find') echo 'checked'?>>Сами нашли</p>
+                <p><input name="otkuda_uznali_o_nas" type="radio" value="Friend" <?php if ($info_from=='Friend') echo 'checked'?>>От друга</p>
             </div>
             <p><strong>Тип обращения: <select class="inp" name="Message_type">
                 <option value="predlozhenie">Предложение</option>
@@ -62,18 +58,14 @@ $time = date('H:i:s');
                 <p><textarea name="Message_text" rows="10" cols="50" style="resize: none;"></textarea></p>
                 <p><input class="inp" type="file" name="file"></input></p>
             
-                <p><input type="checkbox" name="agree_to_edit_personal_data">Даю согласие на обработку персональных данных</p>
+                <p><input type="checkbox" name="agree_to_edit_personal_data" checked>Даю согласие на обработку персональных данных</p>
             
                 <button type="submit">Отправить</button>
             </div>
         </form>
     </main>
-    <footer>
-        <div class="ftr">
-            <p>Телефон: 8(904)099-09-87</p>
-            <p>Эл. почта: peter@timashov.su</p>
-            <p><?php echo 'Сформированно ', $date, ' в ', $time?></p>
-        </div>
-    </footer>
+    
+    <?php include 'templates/footer.php'?>
+
 </body>
 </html>

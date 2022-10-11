@@ -9,68 +9,17 @@
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
-    background-image: url('res/bg1.jpg');
 }
 
 h2 {
     text-align: center;
 }
 
-
-/* -- Навигация -- */
-nav {
-    padding: 10px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-.table-nav {
-    width: 90%;
-    margin: auto;
-    table-layout: fixed;
-}
-.table-nav td {
-    margin: auto; 
-}
-
-.table-nav .title {
-    color: #c0c0c0;
-}
-
-.ta-center {
-    text-align: center;
-}
-nav a {
-    text-decoration: none;
-    color: #ffffff;
-}
-nav a:hover {
-    color:#dbc989;
-}
-/* ----- */
-
-
-
-header {
-    width: 100%;
-    position: sticky;
-    top: 0;
-    background-image: url('res/bg1.jpg');
-    box-shadow: 0px 0px 3px 3px rgba(10,10,10,0.4);
-}
-
 main {
-    background-image: url('res/bg2.jpg');
+    background-image: url('../res/bg2.jpg');
     padding-bottom: 10px;
     height: 100%;
 }
-
-footer {
-    color: #ffffff;
-    padding: 20px;
-    box-shadow: 0px 0px 3px 3px rgba(10,10,10,0.4);
-}
-
-
 
 .recipe_text {
     padding-left: 70px;
@@ -124,7 +73,4 @@ footer {
     padding: 5px;
 }
 
-.ftr {
-    width:250px;
-    margin: auto;
-}
+

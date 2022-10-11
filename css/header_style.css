@@ -1,0 +1,43 @@
+@import url(
+    'https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap'
+);
+
+header {
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-image: url('../res/bg1.jpg');
+    box-shadow: 0px 0px 3px 3px rgba(10,10,10,0.4);
+}
+
+/* -- Навигация -- */
+nav {
+    padding: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.table-nav {
+    width: 90%;
+    margin: auto;
+    table-layout: fixed;
+}
+.table-nav td {
+    margin: auto; 
+}
+
+.table-nav .title {
+    color: #c0c0c0;
+}
+
+.ta-center {
+    text-align: center;
+}
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+}
+nav a:hover {
+    color:#dbc989;
+}
+/* ----- */
