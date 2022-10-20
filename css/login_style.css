@@ -33,7 +33,8 @@ body {
 }
 
 main {
-    height : 25em;
+    flex-grow: 1;
+    height: 80%;
 }
 
 .selected {

@@ -35,14 +35,10 @@ $info_from = 'Adds';
             if (isset($_GET['FIO'])) $FIO = $_GET['FIO'];
             if (isset($_GET['Email'])) $Email = $_GET['Email'];
             if (isset($_GET['otkuda_uznali_o_nas'])) $info_from = $_GET['otkuda_uznali_o_nas'];
-            // if (isset($_GET['Message_type'])) $message_type = $_GET['Message_type'];
-            // if (isset($_GET['Message_text'])) $message_text = $_GET['Message_text'];
-            // if (isset($_GET['file'])) $file = $_GET['file'];
-            // if (isset($_GET['agree_to_edit_personal_data'])) $edit_data = $_GET['agree_to_edit_personal_data'];
             ?>
 
             <p><strong>ФИО:<input name="FIO" class="inp" value="<?php echo $FIO?>"></strong></p>
-            <p><strong>Email:<input name="Email" class="inp" value="<?php echo $Email?>"></strong></p>
+            <p><strong>Email:<input type="email" name="Email" class="inp" value="<?php echo $Email?>"></strong></p>
             <div class="otkuda_uznali">
                 <strong>Откуда узнали о нас?</strong>
                 <p><input name="otkuda_uznali_o_nas" type="radio" value="Adds" <?php if ($info_from=='Adds') echo 'checked'?>>Из рекламы</p>

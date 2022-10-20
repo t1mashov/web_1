@@ -1,7 +1,7 @@
 
 <?php
 
-$current_page = '???';
+$current_page = 'xxx';
 
 date_default_timezone_set("Europe/Moscow");
 $date = date('d.m.y');
@@ -23,16 +23,13 @@ $time = date('H:i:s');
     <main>
         <?php
 
-        $edit_data = 'off';
-        if (isset($_POST['agree_to_edit_personal_data'])) $edit_data = $_POST['agree_to_edit_personal_data'];
-
         echo '<p>Здравствуйте, <b>'.$_POST['FIO'].'</b></p>';
         if ($_POST['Message_type']=='predlozhenie') {
             echo '<p>Спасибо за Ваше предложение</p>';
         } else {
             echo '<p>Мы рассмотрим Вашу жалобу</p>';
         }
-        echo '<p class="ta-center"><textarea style="resize: none;" rows="10" cols="50">'.$_POST['Message_text'].'</textarea></p>';
+        echo '<p class="ta-center"><textarea disabled style="resize: none;" rows="10" cols="50">'.$_POST['Message_text'].'</textarea></p>';
 
         if (isset($_POST['file']) && $_POST['file']!='') echo '<p>Вы приложили следующий файл: <span class="got_file">'.$_POST['file'].'</span></p>';
                     
