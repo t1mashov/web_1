@@ -1,0 +1,10 @@
+
+footer {
+    background-color: #222222;
+    color: rgb(255, 245, 206);
+    padding: 10px;
+}
+
+footer > div {
+    margin-left: 100px;
+}

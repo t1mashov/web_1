@@ -1,0 +1,55 @@
+
+img {
+    width: 250px;
+    height: 230px;
+    border-radius: 15px;
+    margin: 5px;
+}
+
+.img {
+    text-align: center;
+}
+
+.desc {
+    padding: 10px;
+    /* background-color: #cccccc; */
+    border: 1px solid #432209;
+    border-radius: 15px;
+}
+
+.struct {
+    display: inline-block;
+    width: 15vw;
+    background-color: rgb(210, 189, 150);
+    border-radius: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.price-num {
+    color: #2bbe5f;
+    background-color: #3d3d3d;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.price div {
+    margin-bottom: 5px;
+}
+
+.buy {
+    text-align: center;
+    padding: 10px;
+    background-color: #3d3d3d;
+    color: #fff;
+    font-size: 25px;
+    /* width: max-content; */
+    border-radius: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.buy:hover {
+    background-color: #cbcbcb;
+    color: rgb(66, 66, 66);
+}
+

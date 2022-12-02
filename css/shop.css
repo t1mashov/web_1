@@ -1,0 +1,42 @@
+
+.products {
+    width: 50vw;
+    margin: auto;
+}
+
+.wrap-el {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.el {
+    padding: 5px;
+    background-color: rgb(255, 241, 186);
+}
+
+.el img {
+    width: 250px;
+    height: 150px;
+    border-radius: 15px;
+}
+
+.el {
+    border-radius: 10px;
+    border: 2px solid #432209;
+    margin: 5px;
+}
+
+.td-desc {
+    width: 20vw;
+    padding: 10px;
+    color: #000;
+}
+
+.price {
+    color: #2bbe5f;
+    width: 7vw;
+}
+
+.products a {
+    text-decoration: none;
+}

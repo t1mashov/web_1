@@ -1,0 +1,25 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Calibri;
+    background: url('../imgs/bg.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    min-height: 100vh;
+}
+
+.block {
+    border-radius: 1vw;
+    background-color: rgb(255, 245, 206);
+    margin-left: 12vw;
+    margin-right: 12vw;
+    margin-bottom: 0.8vw;
+    padding: 2vw;
+}
