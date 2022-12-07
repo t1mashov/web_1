@@ -12,7 +12,8 @@
 <body>
     <?php 
     include "php/header.php";
-    require("db.php");
+    // require("db.php");
+    include "data_from_db.php";
     ?>
 
     <main>

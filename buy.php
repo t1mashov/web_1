@@ -12,7 +12,7 @@
 <body>
     <?php 
     include "php/header.php";
-    require("db.php");
+    // require("db.php");
     ?>
 
     <main>

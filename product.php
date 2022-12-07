@@ -14,32 +14,33 @@
 <body>
     <?php 
     include "php/header.php";
-    require("db.php");
+    //require("db.php");
+    include "data_from_db.php";
     ?>
     <script src="js/script.js"></script>
 
     <main>
         <?php
 
-        $result = mysqli_query($connect, "
-        select * from products
-        where id=".$_GET['id']."
-        ");
+        // $result = mysqli_query($connect, "
+        // select * from products
+        // where id=".$_GET['id']."
+        // ");
+
         
-        while($el = @mysqli_fetch_assoc($result)) {
             echo '
 <div class="block">
-    <h1>'.$el['name'].'</h1>
+    <h1>'.$data['name'][$_GET['id']].'</h1>
     <div class="img">
-        <img src="'.$el['img_link'].'">
+        <img src="'.$data['img_link'][$_GET['id']].'">
     </div>
-    <div class="desc">'.$el['desc'].'</div>
+    <div class="desc">'.$data['desc'][$_GET['id']].'</div>
 </div>
 
 <div class="block">
     <div>
         <h3>Состав:</h3>
-        <div class="struct" id="id_struct" onclick="show_hide_struct(\''.$el['struct'].'\')">
+        <div class="struct" id="id_struct" onclick="show_hide_struct(\''.$data['struct'][$_GET['id']].'\')">
         нажмите для просмотра
         </div>
     </div>
@@ -47,16 +48,16 @@
 
 <div class="block price">
     <div>
-        <b>Поторопитесь! Осталось: '.$el['real_count'].' шт.</b>
+        <b>Поторопитесь! Осталось: '.$data['real_count'][$_GET['id']].' шт.</b>
     </div>
     <div>
-        <b>Цена: </b><span class="price-num">'.$el['price'].' руб.</span>
+        <b>Цена: </b><span class="price-num">'.$data['price'][$_GET['id']].' руб.</span>
     </div>
 
     <div class="buy"><b>ДОБАВИТЬ В КОРЗИНУ</b></div>
 </div>
             ';
-        }
+        
         
             
         ?>

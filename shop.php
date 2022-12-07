@@ -13,11 +13,12 @@
 <body>
     <?php 
     include "php/header.php";
-    require("db.php");
+    // require("db.php");
+    include "data_from_db.php";
     
-    $result = mysqli_query($connect, "
-    select * from products;
-    ");
+    // $result = mysqli_query($connect, "
+    // select * from products;
+    // ");
     ?>
 
     <main>
@@ -26,23 +27,23 @@
             <p>На этой странице Вы можете выбрать себе торт по душе, и купить его по низкой цене</p>
             <div class="products">
                 <?php
-                while($el = @mysqli_fetch_assoc($result)) {
+                for ($i=0; $i<4; $i++) {
                     echo '
-<a href="product.php?id='.$el['id'].'">
+<a href="product.php?id='.$i.'">
 <div class="wrap-el">
 <table class="el">
 <tr>
     <td class="td-img">
-        <img src="'.$el['img_link'].'">
+        <img src="'.$data['img_link'][$i].'">
     </td>
     <td class="td-desc">
         <div class="content">
-            <h3>'.$el['name'].'</h3>
+            <h3>'.$data['name'][$i].'</h3>
             <p></p>
         </div>
     </td>
     <td class="td-price">
-        <p class="price">'.$el['price'].' руб.</p>
+        <p class="price">'.$data['price'][$i].' руб.</p>
     </td>
 </tr>
 </table>
